@@ -9,6 +9,9 @@ let table = new DataTable('#myTable');
             url: 'https://d0a771ny6f.execute-api.us-east-1.amazonaws.com/demo/getDataDemo',
             method: 'GET',
             dataType: 'json',
+            headers: {
+                'Host': 'd0a771ny6f.execute-api.us-east-1.amazonaws.com'
+            },
             success: function (data) {
                 console.log("data",data);
                 // Agregar datos a la tabla DataTable

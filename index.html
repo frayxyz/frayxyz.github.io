@@ -80,4 +80,27 @@
 
 </body>
 <script src="./app/src/index.js"></script>
+<script>
+  const apiUrl = 'https://d0a771ny6f.execute-api.us-east-1.amazonaws.com/demo/getDataDemo/get';
+  console.log("url ",apiUrl);
+// Realizar la solicitud usando fetch
+fetch(apiUrl)
+  .then(response => {
+    // Verificar si la solicitud fue exitosa (código de estado 2xx)
+    if (!response.ok) {
+      throw new Error(`Error en la solicitud: ${response.status} - ${response.statusText}`);
+    }
+    // Convertir la respuesta a formato JSON
+    return response.json();
+  })
+  .then(data => {
+    // Mostrar la respuesta en la consola
+    console.log('Respuesta de la API:', data);
+  })
+  .catch(error => {
+    // Capturar errores durante la solicitud
+    console.error('Error al realizar la solicitud:', error);
+  });
+
+</script>
 </html>

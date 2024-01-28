@@ -6,7 +6,7 @@ let table = new DataTable('#myTable');
         console.log("ejecutandose funcion jquery");
         // Hacer la solicitud a la API usando jQuery
         $.ajax({
-            url: 'https://d0a771ny6f.execute-api.us-east-1.amazonaws.com/demo/getDataDemo',
+            url: 'https://ff735ilwv0.execute-api.us-east-1.amazonaws.com/demo/getData',
             method: 'GET',
             dataType: 'json',
             headers: {
@@ -17,7 +17,7 @@ let table = new DataTable('#myTable');
                 // Agregar datos a la tabla DataTable
                 const table = $('#myTable').DataTable();
                 data.forEach(item => {
-                    table.row.add([item.id, item.name, item.description]).draw();
+                    table.row.add([item.id, item.nombre, item.descripcion]).draw();
                 });
             },
             error: function (error) {

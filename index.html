@@ -74,34 +74,26 @@
 
     </div>
     <div class="row bg-warning" id="row2" >
-        <div class="text-dark my-5">segundo componente</div>
+      <center><button type="submit" class="btn btn-success my-5">tocame</button></center>
+        
+    </div>
+    <div class="row bg-light" id="row3" >
+      <center><div class="h1 text-warning ">Nosotros</div></center>
+      <div class="col-12">
+        <p>
+          ¡Hola! Bienvenidos a nuestra aplicación, que busca conectar a los clientes con los productores de verduras, vegetales y otros productos frescos. Planeamos abrir tiendas de distribución por municipio o región, donde los clientes podrán recoger sus productos directamente.
+        </p>
+        <p>
+          Además, estamos trabajando en modelos innovadores para promover la producción local y sostenible. Uno de nuestros objetivos es integrar nuestra aplicación con una tienda física, donde podrás encontrar una amplia variedad de productos.
+        </p>
+        <p> 
+          En el futuro, también planeadmos ofrecer productos orgánicos y más. Nuestra visión es crear un mundo donde los clientes puedan acceder a alimentos frescos y saludables de manera directa y sostenible. ¡Únete a nosotros en este emocionante viaje hacia una alimentación más sostenible y accesible!  
+        </p>
+      </div>  
     </div>
   </div>
 
 </body>
-<!--
-<script src="./app/src/index.js"></script>-->
-<script>
-  const apiUrl = 'https://ff735ilwv0.execute-api.us-east-1.amazonaws.com/demo/getData';
-  console.log("url ",apiUrl);
-// Realizar la solicitud usando fetch
-fetch(apiUrl)
-  .then(response => {
-    // Verificar si la solicitud fue exitosa (código de estado 2xx)
-    if (!response.ok) {
-      throw new Error(`Error en la solicitud: ${response.status} - ${response.statusText}`);
-    }
-    // Convertir la respuesta a formato JSON
-    return response.json();
-  })
-  .then(data => {
-    // Mostrar la respuesta en la consola
-    console.log('Respuesta de la API:', data);
-  })
-  .catch(error => {
-    // Capturar errores durante la solicitud
-    console.error('Error al realizar la solicitud:', error);
-  });
+<script src="./app/src/index.js"></script>
 
-</script>
 </html>

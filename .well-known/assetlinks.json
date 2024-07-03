@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "gorouter_deeplink",
+    "package_name": "com.example.deeplink_store_example",
+    "sha256_cert_fingerprints":
+    ["SHA1withRSA"]
+  }
+}]

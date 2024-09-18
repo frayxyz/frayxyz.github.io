@@ -249,3 +249,9 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+//Custom functions
+async function loadTranslations(language) {
+  const response = await fetch(`${language}.json`);
+  return response.json();
+}

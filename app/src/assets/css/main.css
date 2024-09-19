@@ -1627,3 +1627,11 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*custom styles*/
+#circle-color{
+  background-color: #0f1868;
+}
+#text-blue{
+  color: #d9d9d9;
+}

@@ -1629,7 +1629,7 @@ section,
 }
 
 /*custom styles*/
-#circle-color{
+.bg-blue{
   background-color: #0f1868;
 }
 #text-blue{

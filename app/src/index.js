@@ -1,5 +1,5 @@
 console.log("ejecutandose logica javascript");
-let table = new DataTable('#myTable');
+//let table = new DataTable('#myTable');
 
     
     document.addEventListener('DOMContentLoaded', function () {
@@ -15,9 +15,10 @@ let table = new DataTable('#myTable');
             success: function (data) {
                 console.log("data",data);
                 // Agregar datos a la tabla DataTable
-                const table = $('#myTable').DataTable();
-                data.forEach(item => {
-                    table.row.add([item.id, item.nombre, item.descripcion]).draw();
+                //const table = $('#myTable').DataTable();
+                data.skills.forEach(item => {
+                    console.log("skill"+ item);
+                    //table.row.add([item.id, item.nombre, item.descripcion]).draw();
                 });
             },
             error: function (error) {

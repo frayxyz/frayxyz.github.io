@@ -1,0 +1,29 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - personal_web/sept2024  # Se activa con cada push a la rama indicada
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Checkout del repositorio en la rama 'deploy'
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # 2. Configura el nombre y el email del usuario para el commit
+    - name: Set up Git user
+      run: |
+        git config --local user.name "github-actions[bot]"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+
+    # 3. Push de los cambios a la rama 'personal_web/sept2024'
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: personal_web/sept2024  # Usa la rama deploy para GitHub Pages
+        publish_dir: ./  # Directorio raíz del repositorio, cambia si es necesario

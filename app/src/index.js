@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("ejecutandose funcion jquery");
-    // Hacer la solicitud a la API usando jQuery
     $.ajax({
         url: 'https://ff735ilwv0.execute-api.us-east-1.amazonaws.com/demo/getData',
         method: 'GET',
@@ -26,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         },
         error: function (error) {
-            console.error('Error al obtener datos:', error);
+            console.error('Error getting data:', error);
         }
     });
 });

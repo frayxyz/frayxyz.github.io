@@ -12,11 +12,24 @@ console.log("ejecutandose logica javascript");
             
             success: function (data) {
                 console.log("data",data);
-                // Agregar datos a la tabla DataTable
-                //const table = $('#myTable').DataTable();
-                data.skills.forEach(item => {
+
+                //select container skills
+                const skillsContainer = document.querySelector('.skills-content');
+    
+                // Itera sobre los datos y genera el HTML dinámicamente
+                data.skills.forEach((item) => {
                     console.log("skill"+ item);
-                    //table.row.add([item.id, item.nombre, item.descripcion]).draw();
+                    const skillElement = `
+                    <div class="progress">
+                        <span class="skill"><span>${item.name}</span> <i class="val">${item.level * 20}%</i></span>
+                        <div class="progress-bar-wrap">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="${item.level * 20}" aria-valuemin="0" aria-valuemax="100" style="width: ${item.percentage}%;"></div>
+                        </div>
+                    </div>
+                    `;
+            
+                    // Inserta el HTML generado en el contenedor
+                    skillsContainer.innerHTML += skillElement;
                 });
             },
             error: function (error) {
